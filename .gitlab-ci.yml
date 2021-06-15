@@ -1,0 +1,12 @@
+image: liuchong/rustup
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - cd modulo
+    - rustup default nightly
+    - cargo build
+    - cargo test
